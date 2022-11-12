@@ -1,24 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="epo-Bo-WqS">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="mEb-3c-kWs">
+            <objects>
+                <viewController id="epo-Bo-WqS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Of0-eS-vC9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TrC-s2-7if">
+                                <rect key="frame" x="122.33333333333333" y="377.66666666666669" width="145.33333333333337" height="88.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yB-XM-Ebu">
+                                        <rect key="frame" x="0.0" y="0.0" width="145.33333333333334" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="ガチャを引く"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="WGE-Gi-Xu3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VK-Yi-Hqa">
+                                        <rect key="frame" x="0.0" y="54.333333333333314" width="145.33333333333334" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="モンスター図鑑"/>
+                                        <connections>
+                                            <segue destination="7MM-wL-6yr" kind="presentation" modalPresentationStyle="fullScreen" id="QWV-o1-Ujv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zHB-ua-Ym7"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="TrC-s2-7if" firstAttribute="centerY" secondItem="Of0-eS-vC9" secondAttribute="centerY" id="7bG-DM-Goy"/>
+                            <constraint firstItem="TrC-s2-7if" firstAttribute="centerX" secondItem="Of0-eS-vC9" secondAttribute="centerX" id="Bl7-kP-oij"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqg-ga-ZHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-800" y="12.796208530805687"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MonsterGachaChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="GyS-Of-frG">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWl-H1-jrf">
+                                <rect key="frame" x="59" y="290" width="272" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJR-r1-Pbn">
+                                <rect key="frame" x="158" y="668" width="76" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="もどる"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1f-Bt-qTu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GyS-Of-frG" secondAttribute="bottom" id="Owb-9h-MPR"/>
+                            <constraint firstItem="GyS-Of-frG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vty-CT-X1y"/>
+                            <constraint firstItem="GyS-Of-frG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aMI-aa-oGK"/>
+                            <constraint firstItem="GyS-Of-frG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wp4-tb-tNf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterView" destination="VWl-H1-jrf" id="eH2-tS-9Sl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
+        </scene>
+        <!--Monster View Controller-->
+        <scene sceneID="X9d-wS-l8m">
+            <objects>
+                <viewController id="7MM-wL-6yr" customClass="MonsterViewController" customModule="MonsterGachaChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvP-eN-l6o">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" id="9qe-Yb-NTv">
+                                <rect key="frame" x="65" y="382" width="260" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="t4D-8f-VsG">
+                                        <rect key="frame" x="0.0" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="9xW-t7-YS7"/>
+                                            <constraint firstAttribute="height" constant="80" id="zYf-Di-jUC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gdc-27-a8H">
+                                        <rect key="frame" x="90" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="H4D-Fa-eBd"/>
+                                            <constraint firstAttribute="height" constant="80" id="ssZ-xD-4fW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wsj-1l-S0a">
+                                        <rect key="frame" x="180" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="iQa-yh-NcJ"/>
+                                            <constraint firstAttribute="width" constant="80" id="pNB-xW-hBX"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="M2V-kV-AZz"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" id="Uz2-gn-cYD">
+                                <rect key="frame" x="65" y="277" width="260" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PaL-BX-0gk">
+                                        <rect key="frame" x="0.0" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ERU-k2-3BO"/>
+                                            <constraint firstAttribute="width" constant="80" id="Eki-hW-IYn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LTD-oc-YPg">
+                                        <rect key="frame" x="90" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="F1f-5h-Cb1"/>
+                                            <constraint firstAttribute="height" constant="80" id="dfO-hj-j3S"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I52-dU-HGd">
+                                        <rect key="frame" x="180" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="grk-K4-YLe"/>
+                                            <constraint firstAttribute="width" constant="80" id="hE7-4H-D04"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="LEJ-7d-foN"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3b-kc-uao">
+                                <rect key="frame" x="165" y="578" width="61" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="back"/>
+                                <connections>
+                                    <action selector="back:" destination="7MM-wL-6yr" eventType="touchUpInside" id="1mh-jz-O1s"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" id="Nvw-gE-UUk">
+                                <rect key="frame" x="65" y="171" width="260" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-Vf-C1Q">
+                                        <rect key="frame" x="0.0" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="L2B-jg-OMz"/>
+                                            <constraint firstAttribute="width" constant="80" id="Lcg-d4-pFF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I5m-eG-2hp">
+                                        <rect key="frame" x="90" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="BMM-tO-5wu"/>
+                                            <constraint firstAttribute="width" constant="80" id="Otf-gE-Hiy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.app.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Iq1-T3-aMC">
+                                        <rect key="frame" x="180" y="1.6666666666666643" width="80" height="77"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="9zh-Y1-cNI"/>
+                                            <constraint firstAttribute="height" constant="80" id="Ixt-7k-Tpq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="EcP-7L-lID"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Qh-g1-Jku"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="monsterAnimation" destination="t4D-8f-VsG" id="nfM-OH-l4P"/>
+                        <outlet property="monsterAnrdoid" destination="gdc-27-a8H" id="50s-Mb-j5S"/>
+                        <outlet property="monsterDesigner" destination="Wsj-1l-S0a" id="7BA-uW-gtW"/>
+                        <outlet property="monsterDigitalMusic" destination="PaL-BX-0gk" id="xGi-TP-avp"/>
+                        <outlet property="monsterIoTMesh" destination="LTD-oc-YPg" id="srd-z5-oak"/>
+                        <outlet property="monsterMediaArt" destination="I52-dU-HGd" id="m31-q0-VFP"/>
+                        <outlet property="monsterMovie" destination="KhX-Vf-C1Q" id="KMP-qr-dbM"/>
+                        <outlet property="monsterUnity" destination="I5m-eG-2hp" id="5a2-dz-AL0"/>
+                        <outlet property="monsterWebService" destination="Iq1-T3-aMC" id="Cbk-JC-C1z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vpy-vf-jOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.692307692307693" y="698.8151658767772"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bgRed.png" width="390" height="844"/>
+        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
